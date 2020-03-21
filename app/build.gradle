@@ -28,6 +28,10 @@ android {
         }
     }
 
+    useLibrary 'android.test.runner'
+    useLibrary 'android.test.base'
+    useLibrary 'android.test.mock'
+
 }
 
 dependencies {
@@ -54,7 +58,10 @@ dependencies {
     implementation 'me.dm7.barcodescanner:zxing:1.9'
 
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.execute.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.execute.espresso:espresso-core:3.2.0'
+
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    // Core library
+    androidTestImplementation 'androidx.test:core:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
 }
