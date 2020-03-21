@@ -18,12 +18,12 @@ User can swipe on an item in the basket to delete it.
 
 
 ### Libraries used
-*_Android MVVM_
-*_Android Lifecycle_
-*_Room_
-*_RxJava RxAndroid RxBinding_
-*_Picasso Image Loading library
-*_ZXing Barcode scanner
+1) _Android MVVM_
+2) _Android Lifecycle_
+3) _Room_
+4) _RxJava RxAndroid RxBinding_
+5) _Picasso Image Loading library
+6) _ZXing Barcode scanner
 
 ## License
 
