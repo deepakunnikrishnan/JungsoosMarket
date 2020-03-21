@@ -1,0 +1,12 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<resources>
+  <color name="primaryColor">#43a047</color>
+  <color name="primaryLightColor">#76d275</color>
+  <color name="primaryDarkColor">#00701a</color>
+  <color name="primaryTextColor">#ffffff</color>
+  <color name="secondaryTextColor">#000000</color>
+
+  <color name = "windowBackgroundColor">#dddddd</color>
+
+  <color name="deleteItemBackgroundColor">#ff0000</color>
+</resources>

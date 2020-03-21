@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">JungsoosMarket</string>
+    <string name="hint_enter_qr_code">Enter QR Code</string>
+    <string name="text_total_label">Total:</string>
+</resources>
