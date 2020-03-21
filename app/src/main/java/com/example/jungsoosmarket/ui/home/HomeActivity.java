@@ -30,8 +30,6 @@ public class HomeActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this,R.layout.home_activity);
         initHomeViewModel();
-        homeViewModel.loadDummyProducts();
-
         addBasketFragment(savedInstanceState);
         binding.floatingActionButton.setOnClickListener(v ->
                 startActivity(new Intent(HomeActivity.this, AddToBasketActivity.class)));

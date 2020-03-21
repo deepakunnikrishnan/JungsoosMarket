@@ -14,6 +14,8 @@ import com.example.jungsoosmarket.data.local.dao.ProductsDao;
 import com.example.jungsoosmarket.data.local.entity.BasketItem;
 import com.example.jungsoosmarket.data.local.entity.Product;
 
+import io.reactivex.schedulers.Schedulers;
+
 @Database(entities = {Product.class, BasketItem.class}, version = 1, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
 
@@ -34,15 +36,16 @@ public abstract class AppDatabase extends RoomDatabase {
                 context,
                 AppDatabase.class,
                 "app_database")
-                /*.addCallback(new Callback() {
+                .addCallback(new Callback() {
                     @Override
                     public void onCreate(@NonNull SupportSQLiteDatabase db) {
                         super.onCreate(db);
-                        AppExecutor.execute(() -> getInstance(context).productsDao().insert(PRODUCTS)
-                        .doOnError(throwable -> Log.i("AppDatabase","Insertion Failed "+throwable.getMessage()))
-                        .subscribe());
+                        getInstance(context).productsDao().insert(PRODUCTS)
+                                .subscribeOn(Schedulers.io())
+                                .doOnError(throwable -> Log.i("AppDatabase","Insertion Failed "+throwable.getMessage()))
+                                .subscribe();
                     }
-                })*/
+                })
                 .build();
     }
 
